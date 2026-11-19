@@ -1,0 +1,312 @@
+{
+  "source": "Wikimedia Commons files linked by OSM wikimedia_commons, Wikidata P18, a matched Wikipedia article image, or a title-matched geotag within 12 m",
+  "attribution": "Wikimedia Commons; license and author are recorded for each file.",
+  "byObjectId": {
+    "relation/1594030": {
+      "image": "./data/wikimedia/3706a660aa91889f.jpg",
+      "fileTitle": "UspenskiySoborPoltava2.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:UspenskiySoborPoltava2.JPG",
+      "author": "Batsv",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:UspenskiySoborPoltava2.JPG",
+      "source": "Wikidata Q4411501 (P18)"
+    },
+    "relation/1611704": {
+      "image": "./data/wikimedia/1c8c8d5f43530053.jpg",
+      "fileTitle": "Полтава Корпусний сад.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D0%B0_%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%BD%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4.JPG",
+      "author": "Posterrr",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q25446998 (P18)"
+    },
+    "relation/2174125": {
+      "image": "./data/wikimedia/096718bdad0244b4.jpg",
+      "fileTitle": "Музей І. Котляревського в Полтаві.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%86._%D0%9A%D0%BE%D1%82%D0%BB%D1%8F%D1%80%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B2_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%96.jpg",
+      "author": "Slovolyub",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "Wikidata Q12119965 (P18)"
+    },
+    "relation/2917925": {
+      "image": "./data/wikimedia/e2b20e6fd413f944.jpg",
+      "fileTitle": "Ботанічний сад Полтавського педагогічного університету 01.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D1%82%D0%B0%D0%BD%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D1%81%D0%B0%D0%B4_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%D1%96%D1%87%D0%BD%D0%BE%D0%B3%D0%BE_%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%83_01.JPG",
+      "author": "Lindroid",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q20073888 (P18)"
+    },
+    "way/57997752": {
+      "image": "./data/wikimedia/c21c1dce7e45b225.jpg",
+      "fileTitle": "YMR-2016-05-31 074.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:YMR-2016-05-31_074.jpg",
+      "author": "Yurii-mr",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikidata Q61117185 (P18)"
+    },
+    "way/101576227": {
+      "image": "./data/wikimedia/138603f067ce9b39.jpg",
+      "fileTitle": "Kotlyarevsky-Museum in Poltava.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Kotlyarevsky-Museum_in_Poltava.jpg",
+      "author": "The original uploader was Turzh at Ukrainian Wikipedia .",
+      "license": "Attribution",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kotlyarevsky-Museum_in_Poltava.jpg",
+      "source": "Wikidata Q12130483 (P18)"
+    },
+    "way/101576946": {
+      "image": "./data/wikimedia/138603f067ce9b39.jpg",
+      "fileTitle": "Kotlyarevsky-Museum in Poltava.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Kotlyarevsky-Museum_in_Poltava.jpg",
+      "author": "The original uploader was Turzh at Ukrainian Wikipedia .",
+      "license": "Attribution",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kotlyarevsky-Museum_in_Poltava.jpg",
+      "source": "Wikidata Q12130483 (P18)"
+    },
+    "way/116337337": {
+      "image": "./data/wikimedia/7977f11f3d1fd564.jpg",
+      "fileTitle": "Poltava art Gallery.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Poltava_art_Gallery.jpg",
+      "author": "Batsv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q4370842 (P18)"
+    },
+    "way/116574238": {
+      "image": "./data/wikimedia/d9ecb9cc49fed877.jpeg",
+      "fileTitle": "Poltava Cadet Corps.jpeg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Poltava_Cadet_Corps.jpeg",
+      "author": "Unknown author Unknown author",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Poltava_Cadet_Corps.jpeg",
+      "source": "Wikidata Q2997767 (P18)"
+    },
+    "way/124087851": {
+      "image": "./data/wikimedia/18ebe800f9ee373d.jpg",
+      "fileTitle": "Saint Sampson's Church (near Poltava).JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Saint_Sampson%27s_Church_(near_Poltava).JPG",
+      "author": "Batsv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q7211773 (P18)"
+    },
+    "way/129018664": {
+      "image": "./data/wikimedia/02ac8437cd0468ca.jpg",
+      "fileTitle": "Будинок-музей Панаса Мирного 09.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%83%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%9F%D0%B0%D0%BD%D0%B0%D1%81%D0%B0_%D0%9C%D0%B8%D1%80%D0%BD%D0%BE%D0%B3%D0%BE_09.JPG",
+      "author": "Vlad2003",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12119970 (P18)"
+    },
+    "way/131215724": {
+      "image": "./data/wikimedia/3d2699ea229cfdf9.jpg",
+      "fileTitle": "Березовий гай у Полтаві.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B5%D1%80%D0%B5%D0%B7%D0%BE%D0%B2%D0%B8%D0%B9_%D0%B3%D0%B0%D0%B9_%D1%83_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%96.jpg",
+      "author": "Користувач:Turzh",
+      "license": "Attribution",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B5%D1%80%D0%B5%D0%B7%D0%BE%D0%B2%D0%B8%D0%B9_%D0%B3%D0%B0%D0%B9_%D1%83_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%96.jpg",
+      "source": "Wikidata Q12082157 (P18)"
+    },
+    "way/160448483": {
+      "image": "./data/wikimedia/e1a0965388af8fc2.jpg",
+      "fileTitle": "Будинок_полтавської_пожежної_команди_-_Музей_авіації_й_космонавтики.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D1%83%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA_%D0%BF%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BF%D0%BE%D0%B6%D0%B5%D0%B6%D0%BD%D0%BE%D1%97_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8_-_%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%B0%D0%B2%D1%96%D0%B0%D1%86%D1%96%D1%97_%D0%B9_%D0%BA%D0%BE%D1%81%D0%BC%D0%BE%D0%BD%D0%B0%D0%B2%D1%82%D0%B8%D0%BA%D0%B8.jpg",
+      "author": "Бондар Володимир",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikipedia uk:Полтавський музей авіації та космонавтики"
+    },
+    "way/162133047": {
+      "image": "./data/wikimedia/7f9d04a0583af9ea.jpg",
+      "fileTitle": "Садиба-музей В.Г.Короленка.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%B4%D0%B8%D0%B1%D0%B0-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%92.%D0%93.%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%BD%D0%BA%D0%B0.JPG",
+      "author": "Vlad2003",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12141922 (P18)"
+    },
+    "way/162590632": {
+      "image": "./data/wikimedia/096718bdad0244b4.jpg",
+      "fileTitle": "Музей І. Котляревського в Полтаві.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%86._%D0%9A%D0%BE%D1%82%D0%BB%D1%8F%D1%80%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B2_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%96.jpg",
+      "author": "Slovolyub",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "Wikidata Q16693321 (P18)"
+    },
+    "way/165189776": {
+      "image": "./data/wikimedia/b142d8aab0e4b56f.jpg",
+      "fileTitle": "Bila altanka.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Bila_altanka.JPG",
+      "author": "User:Turzh",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Bila_altanka.JPG",
+      "source": "Wikidata Q4398661 (P18)"
+    },
+    "way/233093022": {
+      "image": "./data/wikimedia/242a457894e9ce42.jpg",
+      "fileTitle": "PoltavaSpasskajaCerkov.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:PoltavaSpasskajaCerkov.jpg",
+      "author": "Batsv",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:PoltavaSpasskajaCerkov.jpg",
+      "source": "Wikidata Q4430900 (P18)"
+    },
+    "node/329591647": {
+      "image": "./data/wikimedia/4bc9388275ab1a8a.jpg",
+      "fileTitle": "Меморіальний комплекс Солдатської Слави – братська могила 3,5 тис. жертв фашизму.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%A1%D0%BE%D0%BB%D0%B4%D0%B0%D1%82%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%A1%D0%BB%D0%B0%D0%B2%D0%B8_%E2%80%93_%D0%B1%D1%80%D0%B0%D1%82%D1%81%D1%8C%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B3%D0%B8%D0%BB%D0%B0_3,5_%D1%82%D0%B8%D1%81._%D0%B6%D0%B5%D1%80%D1%82%D0%B2_%D1%84%D0%B0%D1%88%D0%B8%D0%B7%D0%BC%D1%83.JPG",
+      "author": "Vlad2003",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12122562 (P18)"
+    },
+    "way/437030028": {
+      "image": "./data/wikimedia/b057dc888f1e1f04.jpg",
+      "fileTitle": "Полтавський краєзнавчий музей.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B0%D1%94%D0%B7%D0%BD%D0%B0%D0%B2%D1%87%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9.jpg",
+      "author": "uk:Користувач:Turzh",
+      "license": "Attribution",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B0%D1%94%D0%B7%D0%BD%D0%B0%D0%B2%D1%87%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9.jpg",
+      "source": "Wikidata Q3868374 (P18)"
+    },
+    "way/643877564": {
+      "image": "./data/wikimedia/4c5395b0b8491dce.jpg",
+      "fileTitle": "Monument-of-Glory.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Monument-of-Glory.jpg",
+      "author": "Leo Medvedev/Лев Леонидович Медведев",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikidata Q4302185 (P18)"
+    },
+    "way/667949697": {
+      "image": "./data/wikimedia/be65409865dd654a.jpg",
+      "fileTitle": "Полтавский городской парк (дендропарк) 5.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_(%D0%B4%D0%B5%D0%BD%D0%B4%D1%80%D0%BE%D0%BF%D0%B0%D1%80%D0%BA)_5.JPG",
+      "author": "Batsv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12141924 (P18)"
+    },
+    "node/1168050427": {
+      "image": "./data/wikimedia/7605e6c2909774d6.jpg",
+      "fileTitle": "P1230567 Петровський парк.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:P1230567_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg",
+      "author": "Posterrr",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikidata Q12138436 (P18)"
+    },
+    "node/1172832088": {
+      "image": "./data/wikimedia/03544ff0c3a23c4a.jpg",
+      "fileTitle": "Kelin's monument in Poltava.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Kelin%27s_monument_in_Poltava.JPG",
+      "author": "Batsv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q4343199 (P18)"
+    },
+    "node/1260592834": {
+      "image": "./data/wikimedia/7dcb4552b0a1dafa.jpg",
+      "fileTitle": "Poltava Kotliarevskogo Str. Monument of I.Kotliarevskiy 02 (YDS 6438).jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Poltava_Kotliarevskogo_Str._Monument_of_I.Kotliarevskiy_02_(YDS_6438).jpg",
+      "author": "Nataliya Shestakova",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikidata Q12138326 (P18)"
+    },
+    "node/1260592845": {
+      "image": "./data/wikimedia/b194cea35cbcea68.jpg",
+      "fileTitle": "Пам’ятник нескореним полтавчанам, 1967.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BC%E2%80%99%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D1%80%D0%B5%D0%BD%D0%B8%D0%BC_%D0%BF%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%87%D0%B0%D0%BD%D0%B0%D0%BC,_1967.jpg",
+      "author": "Tontos",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12138486 (P18)"
+    },
+    "node/1337044336": {
+      "image": "./data/wikimedia/3769038c19820e53.jpg",
+      "fileTitle": "Пам'ятник Борису Мартосу. Полтава (1).jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BC%27%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D1%83_%D0%9C%D0%B0%D1%80%D1%82%D0%BE%D1%81%D1%83._%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D0%B0_(1).jpg",
+      "author": "Shev.vl.vas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "OpenStreetMap wikimedia_commons tag"
+    },
+    "node/1375013115": {
+      "image": "./data/wikimedia/80d6a69746332e19.jpg",
+      "fileTitle": "Пам'ятник Миколі Гоголю в Полтаві.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BC%27%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D1%96_%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8E_%D0%B2_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%96.jpg",
+      "author": "Leonid Pozen (1848–1921) Photograph: Turzh at Ukrainian Wikipedia",
+      "license": "Attribution",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BC%27%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D1%96_%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8E_%D0%B2_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%96.jpg",
+      "source": "Wikidata Q12138381 (P18)"
+    },
+    "node/1444642292": {
+      "image": "./data/wikimedia/c2166b79d9045952.jpg",
+      "fileTitle": "The place of the rest Peter I in Poltava.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:The_place_of_the_rest_Peter_I_in_Poltava.JPG",
+      "author": "Batsv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12138479 (P18)"
+    },
+    "node/1790167146": {
+      "image": "./data/wikimedia/c89227c6b403db8c.jpg",
+      "fileTitle": "Poltava Sklifosofsky Monument.JPG",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Poltava_Sklifosofsky_Monument.JPG",
+      "author": "Batsv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "Wikidata Q12138386 (P18)"
+    },
+    "node/2205317404": {
+      "image": "./data/wikimedia/dfb293bf133bc33d.jpg",
+      "fileTitle": "Poltava Monument to Marusya Churay (YDS 6451).jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Poltava_Monument_to_Marusya_Churay_(YDS_6451).jpg",
+      "author": "Nataliya Shestakova",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikidata Q12138376 (P18)"
+    },
+    "node/2288310117": {
+      "image": "./data/wikimedia/006d29e25f35d423.jpg",
+      "fileTitle": "Самолеты в Полтавском авиамузее.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%BE%D0%BB%D0%B5%D1%82%D1%8B_%D0%B2_%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B0%D0%B2%D0%B8%D0%B0%D0%BC%D1%83%D0%B7%D0%B5%D0%B5.jpg",
+      "author": "ЧуваевНиколай",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "Wikidata Q4370824 (P18)"
+    },
+    "node/2371940502": {
+      "image": "./data/wikimedia/3e723d85f9726ddb.jpg",
+      "fileTitle": "Пам'ятний знак «Галушки». Полтава 02.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B0%D0%BC%27%D1%8F%D1%82%D0%BD%D0%B8%D0%B9_%D0%B7%D0%BD%D0%B0%D0%BA_%C2%AB%D0%93%D0%B0%D0%BB%D1%83%D1%88%D0%BA%D0%B8%C2%BB._%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D0%B0_02.jpg",
+      "author": "Мандрівниця",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Commons geosearch: 4 m from the monument; title match"
+    },
+    "node/4181432380": {
+      "image": "./data/wikimedia/bdc5bfa21ba29c4d.jpg",
+      "fileTitle": "Урочистості_з_відкриття.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%A3%D1%80%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%BE%D1%81%D1%82%D1%96_%D0%B7_%D0%B2%D1%96%D0%B4%D0%BA%D1%80%D0%B8%D1%82%D1%82%D1%8F.jpg",
+      "author": "Vbzyma",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Wikipedia uk:Пам'ятник Івану Мазепі (Полтава)"
+    },
+    "node/1375013124": {
+      "image": "./data/wikimedia/f24e178dbfe967dd.jpg",
+      "fileTitle": "Полтавський просвітницький будинок IMG 1092.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BB%D1%82%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D1%96%D1%82%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%B8%D0%B9_%D0%B1%D1%83%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA_IMG_1092.jpg",
+      "author": "Сарапулов",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "Commons geosearch: 11.1 m from the building; title match"
+    }
+  }
+}
