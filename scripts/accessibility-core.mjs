@@ -48,7 +48,7 @@ export function matchesPlace(feature,{categories,category='',query='',searchText
   const p=feature.properties||{};
   if(categories&&!categories.has(p._category))return false;if(category&&category!==p._category)return false;
   if(wheelchair&&p.wheelchair!=='yes')return false;
-  if(query&&!String(searchText||[p.name,p['name:uk'],p['name:en'],p['addr:full'],p['addr:street'],p['addr:housenumber']].filter(Boolean).join(' ')).toLocaleLowerCase('uk').includes(query.toLocaleLowerCase('uk')))return false;
+  if(query){const text=normalizeName(searchText||[p.name,p['name:uk'],p['name:en'],p['addr:full'],p.address,p['addr:street'],p['addr:housenumber']].filter(Boolean).join(' ')),words=text.split(' '),terms=normalizeName(query).split(' ').filter(Boolean);if(!terms.every(term=>/^\d+$/.test(term)?words.includes(term):text.includes(term)))return false;}
   return matchesAccessibility(p,barrierEnabled,accessFeatures);
 }
 export function parseBarrierParams(search){const p=new URLSearchParams(search);return {enabled:p.get('bf')==='1',selected:[...new Set((p.get('bf_features')||'').split(',').filter(k=>ACCESS_KEYS.includes(k)))].sort()}}

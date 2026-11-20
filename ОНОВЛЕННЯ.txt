@@ -1,0 +1,80 @@
+ОНОВЛЕННЯ РЕПОЗИТОРІЮ ТА ФОРМИ ЗВЕРНЕННЯ
+
+1. Ця папка містить вихідні файли нової версії сайту.
+Скопіюйте ВМІСТ цієї папки в корінь локальної копії репозиторію
+MrGeyzer/Tourist-Map-a-digital-guide-to-Poltava із заміною однойменних файлів.
+Не додавайте зовнішню папку «Для GitHub Pages» усередину репозиторію.
+index.html, package.json та .github мають бути в корені.
+Збережіть наявну папку .git та історію репозиторію; в цьому пакеті .git немає.
+При копіюванні включіть приховані .github і .gitignore.
+Старі .cache, dist, release, node_modules та скріншоти завантажувати не потрібно.
+Якщо завантажуєте через сайт GitHub, великі папки можна додавати окремими порціями.
+
+2. Опублікуйте коміт з оновленими файлами у своїй основній гілці.
+GitHub: Settings → Pages → Build and deployment → Source → GitHub Actions.
+Потім Actions → Publish GitHub Pages → Run workflow → основна гілка → Run workflow.
+Після успішного deploy адреса:
+https://mrgeyzer.github.io/Tourist-Map-a-digital-guide-to-Poltava/
+Workflow запускається вручну: сам push сайт не публікує.
+Для локального редагування: npm start або start-map.bat.
+Локальні правки не потраплять на публічний сайт до коміту, push і запуску workflow.
+ZIP не створювався.
+
+ПОВІДОМЛЕННЯ ПРО НЕТОЧНІСТЬ
+
+Самого GitHub Pages для серверного надсилання недостатньо.
+Підготовлена схема: форма сайту → Cloudflare Worker → GitHub Issues.
+Користувач залишається на сайті, без входу в GitHub.
+Отримувач — команда вашого репозиторію, не міськрада чи ОВА.
+
+A. GitHub
+Репозиторій → Settings → General → Features → увімкніть Issues.
+Особисті Settings → Developer settings → Personal access tokens → Fine-grained tokens.
+Створіть токен для Only select repositories → Tourist-Map-a-digital-guide-to-Poltava.
+Repository permissions → Issues → Read and write. Встановіть строк дії; після
+закінчення строку токен потрібно замінити в секреті Worker.
+Токен не вставляйте у файли сайту, report-config.json, GitHub Pages або чат.
+Для отримання сповіщень увімкніть Watch → Custom → Issues у репозиторії.
+
+B. Cloudflare Worker
+Створіть або відкрийте свій обліковий запис Cloudflare.
+Відкрийте термінал у підпапці backend цієї папки. Потрібен Node.js.
+Виконайте послідовно:
+
+npx wrangler@4 login
+npx wrangler@4 secret put GITHUB_TOKEN
+npx wrangler@4 deploy
+
+Команда secret put запитає токен. Якщо Worker ще не існує, погодьтеся на його
+створення. Далі deploy завантажить код і налаштування з wrangler.toml.
+GITHUB_TOKEN зберігається лише як секрет Cloudflare Worker.
+У backend/wrangler.toml уже задано:
+GITHUB_REPOSITORY = "MrGeyzer/Tourist-Map-a-digital-guide-to-Poltava"
+ALLOWED_ORIGINS = "https://mrgeyzer.github.io"
+До ALLOWED_ORIGINS не додавайте назву репозиторію або кінцевий слеш.
+Також там налаштовано REPORT_RATE_LIMIT. Якщо namespace_id 1001 уже використано
+іншим застосунком вашого Cloudflare-акаунта, задайте інше унікальне число.
+
+C. Підключення до сайту
+Скопіюйте HTTPS-адресу Worker, яку покаже deploy, і додайте /report.
+У report-config.json в основному проєкті та репозиторії задайте, наприклад:
+
+{"endpoint":"https://poltava-map-reports.YOUR-SUBDOMAIN.workers.dev/report"}
+
+Замість YOUR-SUBDOMAIN використайте свою реальну адресу.
+Збережіть коміт, виконайте push та знову запустіть Publish GitHub Pages.
+Якщо публікуєте готові статичні файли вручну, спочатку виконайте npm run build
+і використовуйте оновлений dist, а не попередню збірку.
+
+D. Перевірка
+Оновіть публічний сайт та встановлену офлайн-копію, якщо вона є.
+Надішліть тестове звернення з позначкою «Тест» і перевірте появу Issue.
+Успіх має показувати номер реально створеного звернення.
+Повідомлення в публічному репозиторії також публічні.
+Зараз endpoint порожній: без кроків A–C форма зберігає чернетку, але не надсилає її.
+
+Деталі: backend/README.md та PUBLISHING.md.
+Офіційні довідки:
+https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+https://docs.github.com/en/rest/issues/issues#create-an-issue
+https://developers.cloudflare.com/workers/configuration/secrets/

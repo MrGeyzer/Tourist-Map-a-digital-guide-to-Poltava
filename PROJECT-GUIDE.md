@@ -49,3 +49,11 @@ HTML, CSS і JavaScript; MapLibre GL JS для карти; GeoJSON для точ
 - `scripts/accessibility-import.mjs`, `scripts/import-accessibility.mjs` — адаптер майбутнього ліцензованого експорту.
 - `data/poltava-accessibility.geojson` — дані з походженням кожного твердження.
 - `data/accessibility-source-audit.json` — доступність джерел, реальні поля, умови використання та звіт зіставлення.
+
+## PWA й тема
+
+`manifest.webmanifest`, `sw.js`, `offline-files.json` — встановлення й згенерований офлайн-пакет. `scripts/sw-template.js` — вихідний шаблон worker. `scripts/pwa.mjs`, `scripts/theme.mjs`, `scripts/map-style.mjs` і `styles/theme.css` — інтерфейс офлайн-режиму та дві теми. `vendor` містить локальний MapLibre з worker і ліцензією, `icons` — іконки застосунку, `data/offline` — підкладку центру, шрифти й походження даних. Усі ці файли входять у збірку. Перед публікацією завжди запускай `prepare-publish.bat` або `npm run build`; подробиці — у PUBLISHING.md.
+
+## Звернення та список об’єктів
+
+`report-config.json` задає адресу сервера повідомлень; зараз вона не заповнена. `scripts/report-ui.mjs` і `styles/report.css` — модальна форма та незалежне згортання об’єктів. `scripts/report-model.mjs` містить спільну валідацію. `backend/report-worker.mjs` приймає повідомлення й створює Issue без переходу відвідувача на GitHub. Серверні файли й секрети не копіюються у `dist`; для реального надсилання потрібне підключення за `backend/README.md`.

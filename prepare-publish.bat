@@ -7,9 +7,9 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-node --test scripts/*.test.mjs
-if errorlevel 1 goto failed
 node scripts/build-site.mjs
+if errorlevel 1 goto failed
+node --test scripts/*.test.mjs
 if errorlevel 1 goto failed
 powershell -NoProfile -Command "$ErrorActionPreference = 'Stop'; New-Item -ItemType Directory -Force -Path 'release' | Out-Null; Compress-Archive -Path 'dist\*' -DestinationPath 'release\poltava-map.zip' -Force"
 if errorlevel 1 goto failed

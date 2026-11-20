@@ -1,11 +1,15 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.resolve(root,'dist');
 const entries=[
-  'index.html',
+  'index.html','report-config.json','locales/en.mjs','scripts/localization.mjs',
+  'manifest.webmanifest','manifest.en.webmanifest','styles/theme.css','styles/report.css',
+  'scripts/theme.mjs','scripts/pwa.mjs','scripts/map-style.mjs','scripts/offline-status.mjs',
+  'scripts/report-model.mjs','scripts/report-ui.mjs',
   'scripts/accessibility-core.mjs','scripts/accessibility-ui.mjs',
   'scripts/map-navigation.mjs','scripts/map-region.mjs',
   'data/poltava-poi.geojson','data/poltava-recreation.geojson',
@@ -13,6 +17,12 @@ const entries=[
   'data/poltava-accessibility.geojson','data/accessibility-source-audit.json',
   'data/wikimedia-images.json','data/shelters-geocode-report.csv'
 ];
+for(const directory of ['vendor','icons','data/offline']){
+  for(const file of await fs.readdir(path.join(root,directory),{recursive:true})){
+    const relative=directory+'/'+file.replaceAll(path.sep,'/');
+    if((await fs.lstat(path.join(root,relative))).isFile())entries.push(relative);
+  }
+}
 const images=JSON.parse(await fs.readFile(path.join(root,'data/wikimedia-images.json'),'utf8'));
 for(const image of Object.values(images.byObjectId||{})){
   if(!/^\.\/data\/wikimedia\/[a-zA-Z0-9_-]+\.(jpg|jpeg|png|webp|avif)$/.test(image.image||''))throw new Error('Некоректний шлях до локального фото');
@@ -34,6 +44,17 @@ for(const relative of files){
   await fs.copyFile(path.join(root,relative),destination);
 }
 await fs.writeFile(path.join(output,'.nojekyll'),'');
+// Generate the same versioned offline package for source preview and the release.
+const hash=createHash('sha256');
+for(const file of files){hash.update(file);hash.update(await fs.readFile(path.join(output,file)))}
+const template=await fs.readFile(path.join(root,'scripts/sw-template.js'),'utf8');hash.update(template);
+const version=hash.digest('hex').slice(0,20);
+const manifest=JSON.stringify({version,files},null,2)+'\n';
+const worker=`const BUILD_VERSION=${JSON.stringify(version)};\n`+template;
+for(const directory of [root,output]){
+  await fs.writeFile(path.join(directory,'offline-files.json'),manifest);
+  await fs.writeFile(path.join(directory,'sw.js'),worker);
+}
 
 // Fail a release when a new local dependency was omitted from the explicit public file list.
 async function checkReference(relative,from){
@@ -51,4 +72,4 @@ for(const file of files.filter(f=>f==='index.html'||f.endsWith('.mjs'))){
 }
 for(const image of Object.values(images.byObjectId||{}))await checkReference(image.image,'index.html');
 const bytes=(await Promise.all(files.map(f=>fs.stat(path.join(output,f))))).reduce((n,s)=>n+s.size,0);
-console.log(`Готово: dist — ${files.length+1} файлів, ${(bytes/1024/1024).toFixed(2)} МБ. Локальні шляхи й фотографії перевірено.`);
+console.log(`Готово: dist — ${files.length+3} файлів, ${(bytes/1024/1024).toFixed(2)} МБ. Локальні шляхи й фотографії перевірено.`);

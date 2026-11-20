@@ -53,7 +53,7 @@ const messages = {
     timeout: 'Не вдалося визначити місце за відведений час. Спробуйте ще раз або виберіть початок на карті.',
     unavailable: 'Місцезнаходження недоступне. Увімкніть геолокацію або виберіть початок на карті.',
     outside: 'Некоректні координати місцезнаходження.',outsideRegion:'Ви за межами міста Полтави.',outsideDestination:'Точку B можна обрати лише в межах міста Полтави.',outsideStart:'Точку A можна обрати лише в межах міста Полтави.',routeOutsideRegion:'Знайдений маршрут виходить за межі міста Полтави. Оберіть іншу точку.',regionLoading:'Завантажую межу міста Полтави… Спробуйте за мить.',regionUnavailable:'Не вдалося завантажити межу міста Полтави. Оновіть сторінку; вибір точок поки недоступний.',deviceTimeout:'Дозвіл надано, але пристрій не повернув координати вчасно. Перевірте службу «Розташування» у Windows і доступ до інтернету та спробуйте ще раз.',deviceUnavailable:'Дозвіл сайту надано, але пристрій не визначив координати. Перевірте службу «Розташування» у параметрах Windows і доступ до інтернету або виберіть старт на карті.',permissionUnknown:'Браузер не надав координати. Відкрийте сайт у звичайному браузері, перевірте дозвіл на геолокацію та службу «Розташування» у Windows.',policyBlocked:'Вбудоване вікно або політика браузера блокує геолокацію. Відкрийте сайт у звичайному браузері.',
-    noRoute: 'Не знайдено пішохідного маршруту між точками. Спробуйте точку ближче до дороги або стежки.',
+    offlineRoute:'Для нового маршруту потрібен інтернет. Об’єкти та пошук найближчого укриття доступні офлайн.',noRoute: 'Не знайдено пішохідного маршруту між точками. Спробуйте точку ближче до дороги або стежки.',
     routeError: 'Сервіс маршрутів не відповів або повернув помилку. Спробуйте ще раз.',
     manualStart: 'Обрати початок на карті', retry: 'Спробувати ще раз', chooseDestination: 'Обрати іншу точку', clear: 'Прибрати маршрут',
     startReady: 'Початок маршруту позначено. Тепер виберіть, куди дістатися.', chosenPoint: 'Обрана точка',
@@ -69,7 +69,7 @@ const messages = {
     insecure: 'Your browser blocks location over HTTP. Open this site over HTTPS or choose a starting point on the map.',
     denied: 'Location access is blocked by the browser or operating system. Check site permissions and Windows Location services, or choose a starting point on the map.',
     timeout: 'Location request timed out. Try again or choose a starting point on the map.', unavailable: 'Location is unavailable. Enable location or choose a starting point on the map.',
-    outside:'Invalid location coordinates.',outsideRegion:'You are outside Poltava city.',outsideDestination:'Point B must be inside Poltava city.',outsideStart:'Point A must be inside Poltava city.',routeOutsideRegion:'This route leaves Poltava city. Choose another destination.',regionLoading:'Loading the Poltava city boundary… Try again shortly.',regionUnavailable:'Could not load the city boundary. Reload the page; point selection is currently unavailable.',deviceTimeout:'Permission is granted, but the device did not return coordinates in time. Check Windows Location services and internet access, then try again.',deviceUnavailable:'Site permission is granted, but the device could not determine your position. Check Windows Location services and internet access, or choose a starting point on the map.',permissionUnknown:'The browser did not provide coordinates. Open the site in a regular browser and check location permission and Windows Location services.',policyBlocked:'The embedded window or browser policy blocks geolocation. Open the site in a regular browser.', noRoute: 'No walking route found. Choose a point closer to a road or path.', routeError: 'The routing service did not respond or returned an error. Try again.',
+    outside:'Invalid location coordinates.',outsideRegion:'You are outside Poltava city.',outsideDestination:'Point B must be inside Poltava city.',outsideStart:'Point A must be inside Poltava city.',routeOutsideRegion:'This route leaves Poltava city. Choose another destination.',regionLoading:'Loading the Poltava city boundary… Try again shortly.',regionUnavailable:'Could not load the city boundary. Reload the page; point selection is currently unavailable.',deviceTimeout:'Permission is granted, but the device did not return coordinates in time. Check Windows Location services and internet access, then try again.',deviceUnavailable:'Site permission is granted, but the device could not determine your position. Check Windows Location services and internet access, or choose a starting point on the map.',permissionUnknown:'The browser did not provide coordinates. Open the site in a regular browser and check location permission and Windows Location services.',policyBlocked:'The embedded window or browser policy blocks geolocation. Open the site in a regular browser.', offlineRoute:'A new route requires internet. Places and nearest-shelter search remain available offline.',noRoute: 'No walking route found. Choose a point closer to a road or path.', routeError: 'The routing service did not respond or returned an error. Try again.',
     manualStart: 'Choose start on map', retry: 'Try again', chooseDestination: 'Choose another point', clear: 'Clear route', startReady: 'Starting point marked. Now choose a destination.', chosenPoint: 'Selected point',
     you: 'Your location', manual: 'Starting point (chosen manually)', destination: 'Destination', ready: 'Route ready', min: 'min', km: 'km', m: 'm', loading: 'The map is loading. Try again in a moment.',
     credit: 'Routes: FOSSGIS / OSRM · © OpenStreetMap', privacy: 'The service receives start and destination coordinates to calculate the route.', snap: 'The route follows nearby walkable paths; dashed lines show the approach.'
@@ -129,7 +129,7 @@ export function mountNavigation({ map, maplibregl, createPopup, setPanelOpen, es
     const result=nearestShelter(origin.point,getShelters(),getRegion());
     if(!result){show('shelterEmpty',true);return}
     nearestInfo=result;const point=result.feature.geometry.coordinates;
-    endMarker=marker(point,'У',t('nearestShelter'),'#c6422a');
+    endMarker=marker(point,document.documentElement.lang==='en'?'S':'У',t('nearestShelter'),'#c6422a');
     show('shelterReady');
     fitShelterResult();
 
@@ -152,6 +152,7 @@ export function mountNavigation({ map, maplibregl, createPopup, setPanelOpen, es
   }
   async function buildRoute(point, name) {
     if (!ready()) return;
+    if(navigator.onLine===false){show('offlineRoute',true);return}
     shelterMode=false;nearestInfo=null;
     const id = ++generation; controller?.abort(); setSelecting(null); resetGeometry(); destination = {point, name}; closePopup();
     if (matchMedia('(max-width:800px)').matches) setPanelOpen(false);
@@ -182,7 +183,7 @@ export function mountNavigation({ map, maplibregl, createPopup, setPanelOpen, es
     } catch (error) { if (id === generation) { resetGeometry(); show(error.message in messages.uk ? error.message : 'routeError', true); } }
   }
   function updateLanguage() {
-    for (const [selector, key] of [['#nearestShelter','nearestShelter'],['#locate','locate'],['#routePick','routePick'],['#routeTitle','title'],['#manualStart','manualStart'],['#retryRoute','retry'],['#chooseDestination','chooseDestination'],['#clearRoute','clear'],['#openLocalhost','openLocalhost']]) $(selector).textContent = t(key);
+    for (const [selector, key] of [['#nearestShelter','nearestShelter'],['#routeTitle','title'],['#manualStart','manualStart'],['#retryRoute','retry'],['#chooseDestination','chooseDestination'],['#clearRoute','clear'],['#openLocalhost','openLocalhost']]) $(selector).textContent = t(key);
     for (const [selector, key] of [['#mapLocate','locate'],['#mapRoute','routePick'],['#closeRoute','close']]) { $(selector).setAttribute('aria-label', t(key)); $(selector).title = t(key); }
     $('#openNearestShelter').hidden=!shelterMode||!nearestInfo;
     $('#openNearestShelter').textContent=t('shelterCard');
@@ -230,8 +231,8 @@ export function mountNavigation({ map, maplibregl, createPopup, setPanelOpen, es
     popup.addTo(map);
   });
   $('#nearestShelter').addEventListener('click',findShelter);
-  $('#locate').addEventListener('click', locate); $('#mapLocate').addEventListener('click', locate);
-  for (const id of ['routePick','mapRoute','chooseDestination']) $('#' + id).addEventListener('click', () => {if(!ready())return;shelterMode=false;nearestInfo=null;generation++; controller?.abort(); setSelecting('destination'); });
+  $('#mapLocate').addEventListener('click', locate);
+  for (const id of ['mapRoute','chooseDestination']) $('#' + id).addEventListener('click', () => {if(!ready())return;shelterMode=false;nearestInfo=null;generation++; controller?.abort(); setSelecting('destination'); });
   $('#manualStart').addEventListener('click', () => {if(!ready())return;if(shelterMode&&getShelterState()!=='loaded'){show(getShelterState()==='error'?'shelterError':'shelterLoading',true);return}generation++; controller?.abort(); setSelecting(shelterMode?'shelterStart':'start'); });
   $('#retryRoute').addEventListener('click', () => { if(shelterMode)findShelter();else if (destination) buildRoute(destination.point, destination.name); });
   $('#clearRoute').addEventListener('click', clear); $('#closeRoute').addEventListener('click', clear);

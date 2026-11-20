@@ -107,3 +107,12 @@ test('empty data is valid while malformed/failed loads must not fabricate confir
   assert.equal(matchesAccessibility({},true,[]),false);
   assert.throws(()=>extractPublicState('<html>not a dataset</html>'),/відсутній/);
 });
+
+test('address search ignores commas and case, combines street and house, and distinguishes 36 from 136',()=>{
+  const item=feature('address-test','Місце','м. Полтава, вул. Соборності, 36');
+  assert.equal(matchesPlace(item,{query:'СОБОРНОСТІ 36'}),true);
+  assert.equal(matchesPlace(item,{query:'36, Соборності'}),true);
+  assert.equal(matchesPlace(item,{query:'вул. Соборності, 36'}),true);
+  assert.equal(matchesPlace(feature('other','Інше','Соборності, 136'),{query:'Соборності 36'}),false);
+  assert.equal(matchesPlace(item,{query:'Соборності 36',category:'food'}),false);
+});

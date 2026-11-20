@@ -1,0 +1,12 @@
+name = "poltava-map-reports"
+main = "report-worker.mjs"
+compatibility_date = "2026-11-20"
+
+[vars]
+GITHUB_REPOSITORY = "MrGeyzer/Tourist-Map-a-digital-guide-to-Poltava"
+ALLOWED_ORIGINS = "https://mrgeyzer.github.io"
+
+[[ratelimits]]
+name = "REPORT_RATE_LIMIT"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }

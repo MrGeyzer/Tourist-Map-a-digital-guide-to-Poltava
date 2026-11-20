@@ -9,6 +9,7 @@ const root = path.resolve(projectRoot, process.argv[4] || '.');
 const host = process.argv[2] || '127.0.0.1';
 const port = Number(process.argv[3] || 8000);
 const mimeTypes = {
+  '.css': 'text/css; charset=utf-8',
   '.csv': 'text/csv; charset=utf-8',
   '.geojson': 'application/geo+json; charset=utf-8',
   '.html': 'text/html; charset=utf-8',
@@ -17,6 +18,8 @@ const mimeTypes = {
   '.json': 'application/json; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.mjs': 'text/javascript; charset=utf-8',
+  '.webmanifest': 'application/manifest+json; charset=utf-8',
+  '.pbf': 'application/x-protobuf',
   '.osm': 'application/xml; charset=utf-8',
   '.pdf': 'application/pdf',
   '.png': 'image/png',
