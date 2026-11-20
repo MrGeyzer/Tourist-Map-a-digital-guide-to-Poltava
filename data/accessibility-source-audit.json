@@ -1,0 +1,2188 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-19T22:23:28.269Z",
+  "sources": [
+    {
+      "id": "osm",
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/copyright",
+      "license": "ODbL-1.0",
+      "status": "connected",
+      "snapshot": "2026-11-19T22:12:08Z",
+      "fields": [
+        "ramp",
+        "ramp:wheelchair",
+        "highway=elevator",
+        "toilets:wheelchair",
+        "capacity:disabled",
+        "parking_space=disabled",
+        "wheelchair"
+      ],
+      "note": "Окремі ліфти, пандуси та паркомісця не приписуються сусіднім закладам. Дата знімка бази не є датою перевірки ознаки."
+    },
+    {
+      "id": "poltava-gis",
+      "name": "ГІС Полтавської міської ради",
+      "url": "https://mbk.rada-poltava.gov.ua/registers/1db366f8fed34b4c843c20157210762f",
+      "license": "Портал вимагає посилання при використанні матеріалів. Окрема відкрита ліцензія не заявлена.",
+      "status": "general_only",
+      "retrieved_at": "2026-11-19T22:18:25.117Z",
+      "fields": [
+        "date_ex",
+        "address",
+        "results",
+        "results_data",
+        "results_text"
+      ],
+      "csv_status": 200,
+      "csv_columns": "Дата проведення обстеження;Адреса розташування об’єкта;Підсумки;",
+      "register_rows": 213,
+      "export_features": 211,
+      "note": "GeoJSON/CSV містять лише дату, адресу та загальну оцінку. Пандус, ліфт, вбиральня й паркування з цієї оцінки не виводяться. Імена, ID та координати взяті з публічного реєстру; контакти людей не імпортуються."
+    },
+    {
+      "id": "mindev-open-data",
+      "name": "Відкриті дані моніторингу безбар’єрності",
+      "url": "https://data.gov.ua/dataset/38997a1f-2e86-4bd7-9054-cd9cd206d825",
+      "status": "unavailable",
+      "http_status": 403,
+      "retrieved_at": "2026-11-19T22:18:25.812Z",
+      "note": "Сторінка та CKAN API повертають 403; файли, поля й ліцензія недоступні для перевірки."
+    },
+    {
+      "id": "lun",
+      "name": "ЛУН / Мінрозвитку — пріоритетне джерело",
+      "url": "https://lun.ua/misto/barrier-free",
+      "status": "export_unavailable",
+      "http_status": 200,
+      "retrieved_at": "2026-11-19T22:18:26.175Z",
+      "license": null,
+      "note": "Сайт доступний і посилається на відкритий набір data.gov.ua за 2025 рік. Цей експорт зараз повертає 403. Окрему ліцензію/публічний експорт чотирьох ознак на сайті не встановлено; непідтверджені дані ЛУН не копіюються. Адаптер accessibility-import.mjs приймає перевірений експорт з явним mapping і ліцензією."
+    }
+  ],
+  "excluded": {
+    "osm_outside_city": 20,
+    "gis_outside_city": 27,
+    "gis_missing_geometry": 2
+  },
+  "counts": {
+    "objects": 421,
+    "any_confirmed": 63,
+    "ramp": 29,
+    "elevator": 1,
+    "toilet": 4,
+    "parking": 29
+  },
+  "matching": [
+    {
+      "id": "node/1172755956",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1247189401",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1247189505",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1302997322",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1302997341",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1367849030",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1509089490",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1602656245",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/1699647733",
+      "target": "node/1699647733",
+      "method": "same-id"
+    },
+    {
+      "id": "node/1870489689",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2093828823",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2158601691",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2176176059",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2371940670",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2574126611",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2707372221",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/2805789520",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/3190976752",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/3190976753",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/3248529184",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/3248529240",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/3750977800",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/3921301768",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/4347475164",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/4347486601",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/4347496451",
+      "target": "node/4347496451",
+      "method": "same-id"
+    },
+    {
+      "id": "node/4412562590",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/4586885790",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/4605822895",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/4816209678",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5066219602",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5096975672",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5133276824",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5356976291",
+      "target": "node/5356976291",
+      "method": "same-id"
+    },
+    {
+      "id": "node/5691501910",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5895610510",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5955289150",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/5955610307",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/6036725174",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/6229609019",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/6247299982",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/6247327745",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/6758043926",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/7036232445",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/7040472663",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/7040472667",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/7044489252",
+      "target": "node/7044489252",
+      "method": "same-id"
+    },
+    {
+      "id": "node/7495105336",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/7495105337",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/7912661510",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/8140069201",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/8744782505",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/8762728361",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/8826745027",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/8898889487",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/8975124944",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9006911006",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9084005269",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9175975503",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9245606624",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9421284217",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9796359396",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/9989412134",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/10042747059",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/10673675417",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/10684059666",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/10739830026",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/10739830027",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/10968170629",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11070033756",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11107126987",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11143576407",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11164589467",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11514490839",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11534945936",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11619663736",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11834322369",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/11966153051",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12015070175",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12025487554",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12058699918",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12058814663",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12080026567",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12080026568",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12080056370",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12080056371",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12080056374",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12101868574",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12194005670",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12673155509",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12673155511",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12684210121",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12735873366",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12752325509",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12754777944",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12787520207",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/12976808065",
+      "target": "node/12673155511",
+      "method": "name-address-coordinate"
+    },
+    {
+      "id": "node/13929505464",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/14004300193",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/14133792560",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "node/14136561200",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/109143870",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/111855832",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/111855841",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/115660535",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/115660537",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/115660538",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/115660541",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/115660543",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/115660544",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116337243",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116337259",
+      "target": "way/116337259",
+      "method": "same-id"
+    },
+    {
+      "id": "way/116337289",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116337302",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116337328",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116337340",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116456882",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116456903",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116456926",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116456935",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116574225",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116574232",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116574237",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116574240",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116574242",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/116592409",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/118849922",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/119951043",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/188811592",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/203649943",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/220129852",
+      "target": "way/220129852",
+      "method": "same-id"
+    },
+    {
+      "id": "way/220666716",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/226771235",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/226771236",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/226771237",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/254329130",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/265096036",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/271121696",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/273454812",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/294842888",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/297190435",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/297369134",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/310913716",
+      "target": "way/310913716",
+      "method": "same-id"
+    },
+    {
+      "id": "way/322045908",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/340362903",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/340362907",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/340724195",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/355424106",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/363966297",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/437030028",
+      "target": "way/437030028",
+      "method": "same-id"
+    },
+    {
+      "id": "way/553257305",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/584873895",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/618445039",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/618446388",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/621075431",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/621492119",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/625223000",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/630747789",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/640882744",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/640882784",
+      "target": "way/640882784",
+      "method": "same-id"
+    },
+    {
+      "id": "way/643877564",
+      "target": "way/643877564",
+      "method": "same-id"
+    },
+    {
+      "id": "way/662312764",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/662312765",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/662312786",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/662312787",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/666631488",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/668198317",
+      "target": "way/668198317",
+      "method": "same-id"
+    },
+    {
+      "id": "way/715344131",
+      "target": "way/715344131",
+      "method": "same-id"
+    },
+    {
+      "id": "way/751584393",
+      "target": "way/751584393",
+      "method": "same-id"
+    },
+    {
+      "id": "way/948501394",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/953578173",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/953578186",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/953708255",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/992016045",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/997764514",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/997764516",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/997764518",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/997764567",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1004874298",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1004874299",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1004876857",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1064314457",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1089645175",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1112716466",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1112716468",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1115997518",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1115997519",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1117570917",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1118305158",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1191978422",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1192263201",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1306310934",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1312650609",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1312650610",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1312650611",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1338591315",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369758559",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369758560",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369758561",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369758562",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762930",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762931",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762932",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762952",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762972",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762973",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762974",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369762975",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763036",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763037",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763058",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763059",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763060",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763061",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763062",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1369763063",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1370844103",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1371168055",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1374215353",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1378606310",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1378606311",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1392545470",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1392545471",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1392545475",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1392545478",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1412132215",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1412136820",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1420716195",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1427151383",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1427151384",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1427151385",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1427151386",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1429993839",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1465060414",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1465060415",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1465291965",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "way/1504534612",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "relation/2916932",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3479979214709458539",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480770833050240654",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480777162825402147",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480783764710229904",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480789685096155132",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480792978170053737",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480811293747709184",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3449481000982152360",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480704928270255653",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480719781651285660",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480833344856393115",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480836437551613447",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480865191820789473",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480874970907674552",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480868090353289036",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481346547310920782",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481349564433171644",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481358938400621864",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481366163030541716",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481369725680748032",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481382705046750936",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481394332353693509",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481398972965193619",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481420909628098559",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481431164919481452",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481485650186732760",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481489073367942477",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481493066446013882",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481496296211088934",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481499898531022484",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481502739005966142",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481511506477058026",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3481372723383371372",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3480848977203562101",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483540179493324229",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483548369316480565",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483556654031570593",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483561263722661645",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483579120988719086",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483581684387939419",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483584453308056775",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483586967910745395",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483589707344905632",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483593530587219469",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483596406806021753",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483709967821702629",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3484249114227508559",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485136178284332652",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485139651537143520",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485144878554286000",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485153981158655033",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3483571591231571841",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485157667280782502",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485184410892895507",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485189581739918720",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485196445600974324",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485215193384879778",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485703452254799854",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485708212689175648",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485713236509066452",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485716763700626955",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485725253475239016",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485747986653250863",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485760415575574354",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485763819018389409",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485771050870899726",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485794349030049002",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485849830561940824",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485855727778530758",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485858286337525299",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485861104314222240",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485864178151851789",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485867788826838906",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485869995534059495",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485893805876446292",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485901556874740985",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485904468938065254",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485908522296673747",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485911974007539264",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485914823995164333",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3479965765212309036",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488778686755243596",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488782022141281952",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485918689843218203",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488762612454262698",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3486426308320166916",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488814429154313393",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488818755771828003",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488840201734718468",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488827215011907534",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488789141334787768",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488843396619961406",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489357464082580793",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488860298859775092",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3488870317886014716",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489363001612436903",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489575556456908783",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489406444241946350",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489403640945313464",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489427810185905956",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489444609572997096",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489400336932669058",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489449990395266105",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489372858889537043",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489502854522078821",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489515228289304290",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489364832409355741",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489438570488268690",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485128235044308381",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3490139235321644575",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3494579504599271382",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3504021718182135279",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489584842453025944",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3490125368768071090",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3490103096770561404",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3490089137002775818",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3490132365831833064",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3505313337523046143",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3504769215565399387",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3504790204491761101",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3504791627719771711",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3504793817423283859",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3504803986689492681",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3505319980134565685",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3505437859152660331",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511244803708814523",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511253917897852201",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511831298144470087",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511847546014139533",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511850620405417155",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511852973812614393",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3628534186412869218",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511855494991971631",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511858311550993864",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511860449647789665",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511864061933389562",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511878014604412587",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3511961451625448786",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514014773500970599",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514020619026957708",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514034382274823544",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514040438564587124",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514046788665345707",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514048639829804769",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514051495504906007",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514054070329411405",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514055872445679491",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514059208880293820",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514065594448086270",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514068311216227636",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514073872905274785",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514079834563151395",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514082946887714563",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514086951122634625",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485699530639280000",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485753704118748610",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3485784869617796220",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3486438954121561427",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3486422981071079314",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3658232962140342142",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3489582259768394850",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3658223412624492360",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3628552996624795387",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3658263435210130853",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3658258773249623408",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3825809335846438790",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3658238934753740723",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3820059583838159959",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3824283573267989955",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3484967895266494097",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3821482380288329329",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3823503811545138342",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3823508144798041307",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3823564187234206997",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3824277016488708072",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3824440667652752397",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3825009994768582017",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3825793772503959348",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3829288210391893062",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3821466528805553724",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3829301267813893213",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3831546872145643492",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3514031673970787650",
+      "target": null,
+      "method": "unmatched"
+    },
+    {
+      "id": "gis/3658280789319092138",
+      "target": null,
+      "method": "unmatched"
+    }
+  ]
+}

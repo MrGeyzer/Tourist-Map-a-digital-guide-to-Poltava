@@ -1,0 +1,13 @@
+{
+  "name": "poltava-open-data-map",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node scripts/serve-map.mjs 127.0.0.1 8001",
+    "build": "node scripts/build-site.mjs",
+    "preview": "node scripts/serve-map.mjs 127.0.0.1 8002 dist",
+    "test": "node --test scripts/*.test.mjs"
+  }
+}

@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import {adaptMappedRecords,parseCSV} from './accessibility-import.mjs';
+import {pointInRegion} from './map-region.mjs';
+import {validateAccessDataset} from './accessibility-core.mjs';
+const args=Object.fromEntries(process.argv.slice(2).filter(a=>a.startsWith('--')).map(a=>{const i=a.indexOf('=');return [a.slice(2,i),a.slice(i+1)]}));
+if(!args.input||!args.mapping||!args.output)throw new Error('Використання: node scripts/import-accessibility.mjs --input=export.csv --mapping=mapping.json --output=normalized.geojson');
+const text=await fs.readFile(args.input,'utf8'),mapping=JSON.parse(await fs.readFile(args.mapping,'utf8'));
+const records=adaptMappedRecords(args.input.toLowerCase().endsWith('.csv')?parseCSV(text,mapping.delimiter||';'):JSON.parse(text),mapping);
+const city=JSON.parse(await fs.readFile(new URL('../data/poltava-boundary.geojson',import.meta.url),'utf8')).features[0].geometry;
+const features=records.filter(f=>pointInRegion(f.geometry.coordinates,city));
+const output={type:'FeatureCollection',schema_version:1,features,sources:[mapping.source],excluded_outside_city:records.length-features.length};validateAccessDataset(output);
+await fs.writeFile(args.output,JSON.stringify(output,null,2)+'\n');console.log(`Імпортовано в межах Полтави: ${features.length}; поза містом: ${records.length-features.length}`);

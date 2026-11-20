@@ -3,7 +3,9 @@ import http from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+// Optional directory is used to preview the exact static release, independently of source edits.
+const root = path.resolve(projectRoot, process.argv[4] || '.');
 const host = process.argv[2] || '127.0.0.1';
 const port = Number(process.argv[3] || 8000);
 const mimeTypes = {
