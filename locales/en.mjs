@@ -2,6 +2,8 @@
 export default {
   'Полтава поруч — туристична карта':'Poltava Nearby — tourist map',
   'Полтава поруч':'Poltava Nearby',
+  'Перейти до пласкої мапи':'Switch to flat map',
+  'Показати 3D-будівлі':'Show 3D buildings',
   'Повідомити про неточність':'Report an issue',
   'Стан офлайн-копії':'Offline copy status',
   'Перевіряємо офлайн-копію':'Checking offline copy',

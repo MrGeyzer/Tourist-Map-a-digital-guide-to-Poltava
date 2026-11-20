@@ -1,4 +1,4 @@
-const BUILD_VERSION="1df4a7ea802e069fb55f";
+const BUILD_VERSION="61ee8fb9cf1b24a84585";
 /* Build adds a content version below. Keep this template out of the public file list. */
 const PREFIX='poltava-pwa:'+self.registration.scope+':';
 const CACHE=PREFIX+BUILD_VERSION;

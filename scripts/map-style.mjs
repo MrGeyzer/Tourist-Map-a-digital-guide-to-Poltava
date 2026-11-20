@@ -9,6 +9,12 @@ export function baseLayers(source,dark=false){
     make('waterway','line','waterway',{'line-color':p.water,'line-width':2}),
     make('building','fill','building',{'fill-color':p.building,'fill-outline-color':p.background},{minzoom:13}),
     make('roads','line','transportation',{'line-color':['match',['get','class'],['motorway','trunk','primary','secondary','tertiary'],p.major,['path','track','footway','cycleway'],p.path,p.road],'line-width':['interpolate',['linear'],['zoom'],10,.6,14,2.5,18,10]},{layout:{'line-join':'round','line-cap':'round'}}),
+    make('buildings-3d','fill-extrusion','building',{
+      'fill-extrusion-color':p.building,
+      'fill-extrusion-height':['interpolate',['linear'],['zoom'],13,0,14,['coalesce',['get','render_height'],0]],
+      'fill-extrusion-base':['coalesce',['get','render_min_height'],0],
+      'fill-extrusion-opacity':0.95
+    },{minzoom:13,filter:['all',['!=',['get','hide_3d'],true],['!=',['get','hide_3d'],1],['!=',['get','hide_3d'],'true']]}),
     make('streets','symbol','transportation_name',{'text-color':p.text,'text-halo-color':p.halo,'text-halo-width':1.4},{minzoom:13,layout:{'symbol-placement':'line','text-field':['coalesce',['get','name:uk'],['get','name'],['get','name:latin'],''],'text-font':['Noto Sans Regular'],'text-size':12,'text-max-angle':30}}),
     make('places','symbol','place',{'text-color':p.text,'text-halo-color':p.halo,'text-halo-width':1.5},{layout:{'text-field':['coalesce',['get','name:uk'],['get','name'],['get','name:latin'],''],'text-font':['Noto Sans Bold'],'text-size':13,'text-max-width':8}})
   ];
